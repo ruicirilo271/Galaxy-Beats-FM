@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070312">
+  <title>🌌 Galaxy Beats FM · Super Deus</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='default_cover.png') }}">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <div class="bg-grid"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-orb"></span>
+      <div>
+        <strong>GALAXY BEATS FM</strong>
+        <small>Modo Super Deus</small>
+      </div>
+    </div>
+
+    <div class="now-strip">
+      <span id="statusDot" class="status-dot"></span>
+      <span id="songNow">🎵 A preparar transmissão...</span>
+    </div>
+
+    <div class="clock-box">
+      <span>Lisboa</span>
+      <strong id="clock">00:00:00</strong>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="hero panel glass">
+      <div class="hero-left">
+        <div class="station-head">
+          <img id="logoNow" class="station-logo" src="{{ url_for('static', filename='default_cover.png') }}" alt="Logo Rádio">
+          <div>
+            <p id="sourceBadge" class="pill">A ligar...</p>
+            <h1 id="titleNow">Rádio Atual</h1>
+            <p id="stationBadge" class="muted">A carregar programação...</p>
+            <p id="timeNow" class="time-range">00:00 – 01:00</p>
+          </div>
+        </div>
+
+        <canvas id="eq" class="equalizer" aria-label="Spectrum analyzer"></canvas>
+
+        <div class="player-card">
+          <audio id="player" controls autoplay playsinline preload="auto" crossorigin="anonymous"></audio>
+          <button id="soundUnlock" class="btn unlock" style="display:none;">🔈 Ativar Som</button>
+          <div id="soundToast" class="sound-toast" style="display:none;">🔈 Clique para ativar o som</div>
+        </div>
+
+        <div class="stations-zone">
+          <div class="section-title">
+            <h2>🎙️ Controlo Manual</h2>
+            <span id="nextShow">Próximo: —</span>
+          </div>
+          <div class="stations-grid">
+            <button class="btn" data-id="MOTARD">Motard</button>
+            <button class="btn" data-id="RENASCENCA">Renascença</button>
+            <button class="btn" data-id="CIDADEFM">Cidade FM</button>
+            <button class="btn" data-id="RADIOCIDADE">Rádio Cidade</button>
+            <button class="btn" data-id="RECORD">Record</button>
+            <button class="btn" data-id="ANTENA1">Antena 1</button>
+          </div>
+          <button id="autoBtn" class="btn btn-wide active">✨ Modo Automático</button>
+        </div>
+      </div>
+
+      <aside class="cover-stage">
+        <div class="cover-ring"></div>
+        <img id="coverArt" src="{{ url_for('static', filename='default_cover.png') }}" alt="Capa do Álbum">
+        <div class="cover-caption">
+          <strong>Album Cover</strong>
+          <span>Spotify / iTunes fallback</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel glass schedule-panel">
+        <div class="section-title sticky-title">
+          <h2>📅 Programação</h2>
+          <span>24h Galaxy</span>
+        </div>
+        <ul id="schedList" class="schedule-list">
+          <li class="sched-card skeleton">A carregar...</li>
+        </ul>
+      </article>
+
+      <article class="panel glass info-panel">
+        <h2>📝 Letra da Música</h2>
+        <div id="lyricsBox" class="text-box">—</div>
+      </article>
+
+      <article class="panel glass info-panel">
+        <h2>🎤 Biografia do Artista</h2>
+        <div id="artistBio" class="text-box">—</div>
+      </article>
+
+      <article class="panel glass video-panel">
+        <h2>📺 Vídeo no YouTube</h2>
+        <div class="youtube-shell">
+          <iframe id="ytFrame" src="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div id="ytStatus" class="yt-status">Aguardando identificação da música...</div>
+      </article>
+
+      <article class="panel glass history-panel">
+        <div class="section-title sticky-title">
+          <h2>📜 Histórico</h2>
+          <span>últimas músicas</span>
+        </div>
+        <ul id="histList" class="history-list"></ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Desenvolvido por <strong>Rui Cirilo</strong> · <span>Galaxy Beats FM</span> © 2026
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,726 @@
+[
+  {
+    "when": "2025-12-07T17:42:40.017559+00:00",
+    "station_id": "RADIOCIDADE",
+    "station": "Rádio Cidade",
+    "artist": "ELLIE CAMPBELL",
+    "title": "DON'T WANT YOU BACK (RADIO MIX)"
+  },
+  {
+    "when": "2025-12-07T17:46:10.009628+00:00",
+    "station_id": "RADIOCIDADE",
+    "station": "Rádio Cidade",
+    "artist": "SISTER HAZEL",
+    "title": "ALL FOR YOU"
+  },
+  {
+    "when": "2025-12-07T17:49:10.009698+00:00",
+    "station_id": "RADIOCIDADE",
+    "station": "Rádio Cidade",
+    "artist": "SISTER HAZEL",
+    "title": "ALL FOR YOU"
+  },
+  {
+    "when": "2025-12-07T17:50:40.012977+00:00",
+    "station_id": "RADIOCIDADE",
+    "station": "Rádio Cidade",
+    "artist": "TINA TURNER",
+    "title": "THE BEST"
+  },
+  {
+    "when": "2025-12-07T17:54:10.012375+00:00",
+    "station_id": "RADIOCIDADE",
+    "station": "Rádio Cidade",
+    "artist": "TINA TURNER",
+    "title": "THE BEST"
+  },
+  {
+    "when": "2025-12-07T17:54:40.022892+00:00",
+    "station_id": "RADIOCIDADE",
+    "station": "Rádio Cidade",
+    "artist": "PET SHOP BOYS",
+    "title": "SUBURBIA [1986]"
+  },
+  {
+    "when": "2025-12-07T17:58:10.012168+00:00",
+    "station_id": "RADIOCIDADE",
+    "station": "Rádio Cidade",
+    "artist": "PET SHOP BOYS",
+    "title": "SUBURBIA [1986]"
+  },
+  {
+    "when": "2025-12-07T18:00:10.017902+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2025-12-07T18:01:10.016978+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "BLACKFOOT",
+    "title": "WISHING WELL"
+  },
+  {
+    "when": "2025-12-07T18:03:40.005198+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "DREAM THEATER",
+    "title": "BARSTOOL WARRIOR"
+  },
+  {
+    "when": "2025-12-07T18:06:40.005651+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "DREAM THEATER",
+    "title": "BARSTOOL WARRIOR"
+  },
+  {
+    "when": "2025-12-07T18:09:40.008142+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "DREAM THEATER",
+    "title": "BARSTOOL WARRIOR"
+  },
+  {
+    "when": "2025-12-07T18:10:10.008670+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2025-12-07T18:11:10.011373+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "TROTIL",
+    "title": "SAUDADE"
+  },
+  {
+    "when": "2025-12-07T18:14:10.014450+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "TROTIL",
+    "title": "SAUDADE"
+  },
+  {
+    "when": "2025-12-07T18:15:10.008126+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "TORUL",
+    "title": "IF YOU SO WISH"
+  },
+  {
+    "when": "2025-12-07T18:18:10.019026+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "TORUL",
+    "title": "IF YOU SO WISH"
+  },
+  {
+    "when": "2025-12-07T18:19:10.005257+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "CRIPPLED BLACK PHOENIX",
+    "title": "RAIN BLACK, REIGN HEAVY"
+  },
+  {
+    "when": "2025-12-07T18:22:10.018210+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "CRIPPLED BLACK PHOENIX",
+    "title": "RAIN BLACK, REIGN HEAVY"
+  },
+  {
+    "when": "2025-12-07T18:25:10.004891+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "ELVIS COSTELLO",
+    "title": "WATCHING THE DETECTIVES"
+  },
+  {
+    "when": "2025-12-07T18:28:10.007815+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "ELVIS COSTELLO",
+    "title": "WATCHING THE DETECTIVES"
+  },
+  {
+    "when": "2025-12-07T18:28:40.009685+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2025-12-07T18:29:10.011660+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "THE NEW DIVISION",
+    "title": "MODUS"
+  },
+  {
+    "when": "2025-12-07T18:32:13.032705+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "THE NEW DIVISION",
+    "title": "MODUS"
+  },
+  {
+    "when": "2025-12-07T18:33:40.010388+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "SAMSON",
+    "title": "RIDING WITH THE ANGELS"
+  },
+  {
+    "when": "2025-12-07T18:36:40.010651+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "SAMSON",
+    "title": "RIDING WITH THE ANGELS"
+  },
+  {
+    "when": "2025-12-07T18:37:10.015790+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2025-12-07T18:37:40.014019+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "FM",
+    "title": "DANGEROUS GROUND"
+  },
+  {
+    "when": "2025-12-07T18:41:10.017667+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "FM",
+    "title": "DANGEROUS GROUND"
+  },
+  {
+    "when": "2025-12-07T18:42:10.008447+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "A-HA",
+    "title": "TAKE ON ME (EXTENDED MIX)"
+  },
+  {
+    "when": "2025-12-07T18:45:10.008462+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "A-HA",
+    "title": "TAKE ON ME (EXTENDED MIX)"
+  },
+  {
+    "when": "2025-12-07T18:46:40.005840+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2025-12-07T18:47:10.012851+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "ALAN PARSONS",
+    "title": "HALOS"
+  },
+  {
+    "when": "2025-12-07T18:50:10.014325+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "ALAN PARSONS",
+    "title": "HALOS"
+  },
+  {
+    "when": "2025-12-07T18:51:10.014995+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "QUARTETO 1111",
+    "title": "AS TROVAS DO VENTO QUE PASSA"
+  },
+  {
+    "when": "2025-12-07T18:54:13.029159+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "QUARTETO 1111",
+    "title": "AS TROVAS DO VENTO QUE PASSA"
+  },
+  {
+    "when": "2025-12-07T18:54:40.018823+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2025-12-07T18:55:13.031131+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "STRAY CATS",
+    "title": "BABY BLUE EYES"
+  },
+  {
+    "when": "2025-12-07T18:57:40.007098+00:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "NIGHTRIDER",
+    "title": "STRANGER IN A STRANGE LAND"
+  },
+  {
+    "when": "2025-12-07T19:08:40.018059+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Benson Boone",
+    "title": "Cry"
+  },
+  {
+    "when": "2025-12-07T19:17:10.015199+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Jorge Benvinda",
+    "title": "Gente Bestial"
+  },
+  {
+    "when": "2025-12-07T19:19:10.015096+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Mimi Froes",
+    "title": "Vai Ruir (feat. Rui Veloso) [ao vivo no Estúdio Vale de Lobos]"
+  },
+  {
+    "when": "2025-12-07T19:22:10.017597+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Mimi Froes",
+    "title": "Vai Ruir (feat. Rui Veloso) [ao vivo no Estúdio Vale de Lobos]"
+  },
+  {
+    "when": "2025-12-07T19:22:40.004450+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "The Beach Boys",
+    "title": "Frosty The Snowman"
+  },
+  {
+    "when": "2025-12-07T19:25:40.018590+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Vinicius de Moraes",
+    "title": "Tarde Em Itapoan"
+  },
+  {
+    "when": "2025-12-07T19:29:10.010709+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Vinicius de Moraes",
+    "title": "Tarde Em Itapoan"
+  },
+  {
+    "when": "2025-12-07T19:31:10.008408+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "The B-52's",
+    "title": "Love Shack"
+  },
+  {
+    "when": "2025-12-07T19:34:10.014111+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "The B-52's",
+    "title": "Love Shack"
+  },
+  {
+    "when": "2025-12-07T19:41:10.019525+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Kaosklap",
+    "title": "Road to Nowhere"
+  },
+  {
+    "when": "2025-12-07T19:45:40.010467+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Lô Borges",
+    "title": "Um Girassol Da Cor Do Seu Cabelo"
+  },
+  {
+    "when": "2025-12-07T19:46:40.006229+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Paul Simon",
+    "title": "You Can Call Me Al"
+  },
+  {
+    "when": "2025-12-07T19:49:40.012964+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Paul Simon",
+    "title": "You Can Call Me Al"
+  },
+  {
+    "when": "2025-12-07T19:52:13.027065+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "Pedro da Linha & Dino d'Santiago",
+    "title": "Oji é Oji"
+  },
+  {
+    "when": "2025-12-07T19:56:40.006342+00:00",
+    "station_id": "ANTENA1",
+    "station": "Antena 1",
+    "artist": "The Cure",
+    "title": "In Between Days"
+  },
+  {
+    "when": "2025-12-07T20:00:13.033653+00:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "PEDRO SAMPAIO, Mc Gw, Mc Jhey & MC Rodrigo do CN",
+    "title": "SEQUÊNCIA FEITICEIRA (feat. MC Nito)"
+  },
+  {
+    "when": "2025-12-07T20:02:40.015618+00:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "Deejay Telio & Wet Bed Gang",
+    "title": "Álcool & Prazer"
+  },
+  {
+    "when": "2025-12-07T20:09:40.015092+00:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "ROSÉ & Bruno Mars",
+    "title": "APT."
+  },
+  {
+    "when": "2025-12-07T20:21:13.014679+00:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "Billie Eilish",
+    "title": "bad guy"
+  },
+  {
+    "when": "2025-12-07T20:26:13.022655+00:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "Bad Bunny",
+    "title": "DtMF"
+  },
+  {
+    "when": "2025-12-07T20:26:40.018271+00:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "Sabrina Carpenter",
+    "title": "Manchild"
+  },
+  {
+    "when": "2025-12-07T20:31:13.029659+00:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "ROSALÍA & Yahritza Y Su Esencia",
+    "title": "La Perla"
+  },
+  {
+    "when": "2025-12-07T20:47:10.002973+00:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "Benson Boone",
+    "title": "Beautiful Things"
+  },
+  {
+    "when": "2026-06-07T22:38:47.490706+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "WOBBLER",
+    "title": "FIVE ROOMS"
+  },
+  {
+    "when": "2026-06-07T22:41:14.471976+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "DEEP PURPLE",
+    "title": "SPACE TRUCKIN"
+  },
+  {
+    "when": "2026-06-07T22:44:14.476661+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "DEEP PURPLE",
+    "title": "SPACE TRUCKIN"
+  },
+  {
+    "when": "2026-06-07T22:45:14.472853+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2026-06-07T22:46:44.472265+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "FRIDA",
+    "title": "I KNOW THERE'S SOMETHING GOING ON"
+  },
+  {
+    "when": "2026-06-07T22:49:44.480993+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "FRIDA",
+    "title": "I KNOW THERE'S SOMETHING GOING ON"
+  },
+  {
+    "when": "2026-06-07T22:51:44.474703+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "POP FIVE MUSIC INC.",
+    "title": "GOLDEN EGG"
+  },
+  {
+    "when": "2026-06-07T22:54:44.475031+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "AIRBOURNE",
+    "title": "DIRTY ANGEL"
+  },
+  {
+    "when": "2026-06-07T22:56:47.487157+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "BREAK EVEN",
+    "title": "CHAMELEON"
+  },
+  {
+    "when": "2026-06-07T22:59:14.478593+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2026-06-07T23:00:14.479234+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:03:44.474438+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:06:44.474747+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:09:44.479571+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:12:14.473552+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2026-06-07T23:13:14.487884+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:16:44.486714+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:19:47.493676+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:23:14.474076+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:26:14.478006+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:28:44.477448+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2026-06-07T23:31:44.477528+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2026-06-07T23:35:44.473962+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:36:14.471982+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2026-06-07T23:39:14.480542+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2026-06-07T23:40:44.484259+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:43:47.494055+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:46:47.494822+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:50:14.475782+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:53:14.488576+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-07T23:56:44.481303+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-08T00:00:14.473092+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-08T00:03:14.473197+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-08T00:06:14.473389+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-08T00:09:14.480115+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-08T00:12:44.474779+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "HOLOCAUSTO METAL RADIOSHOW EMISSÃO 1271",
+    "title": "LIVE"
+  },
+  {
+    "when": "2026-06-08T00:14:27.307504+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "MOTARDFM",
+    "title": "DESDE 2000 A ACELERAR COM CÍVISMO!"
+  },
+  {
+    "when": "2026-06-16T18:17:25.952188+01:00",
+    "station_id": "MOTARD",
+    "station": "Rádio Motard",
+    "artist": "THE SMITHS",
+    "title": "THERE IS A LIGHT THAT NEVER GOES OUT"
+  },
+  {
+    "when": "2026-06-16T20:12:04.033004+01:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "Anitta, MC Danny & HITMAKER",
+    "title": "Sei Que Tu Me Odeia",
+    "source": "ShazamIO"
+  },
+  {
+    "when": "2026-06-16T20:12:19.884040+01:00",
+    "station_id": "RADIOCIDADE",
+    "station": "Rádio Cidade",
+    "artist": "FEARGAL SHARKEY",
+    "title": "YOU LITTLE THIEF [1986]",
+    "source": "metadata-api"
+  },
+  {
+    "when": "2026-06-16T20:14:04.842744+01:00",
+    "station_id": "RADIOCIDADE",
+    "station": "Rádio Cidade",
+    "artist": "ROXETTE",
+    "title": "MILK AND TOAST AND HONEY",
+    "source": "metadata-api"
+  }
+]
