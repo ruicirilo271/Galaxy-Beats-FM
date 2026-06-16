@@ -17,6 +17,7 @@ import os
 import re
 import time
 import tempfile
+import xml.etree.ElementTree as ET
 from collections import deque
 from datetime import datetime, time as dtime, timedelta
 from pathlib import Path
@@ -147,6 +148,7 @@ def health():
             "youtube_api_key_ready": bool(YOUTUBE_API_KEY),
             "spotify_ready": bool(SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET),
             "lastfm_ready": bool(LASTFM_API_KEY),
+            "cidadefm_meta_url_ready": bool(os.getenv("CIDADEFM_META_URL") or os.getenv("URL_CIDADEFM_META")),
             "stations": list(STATIONS.keys()),
         }
     )
@@ -554,9 +556,211 @@ def youtube_video(artist: str, title: str) -> Optional[str]:
     return info.get("embed_url") or None
 
 
+
+# ───────────── Parsing robusto de metadata de rádios ─────────────
+def _clean_meta_value(value: Any) -> str:
+    if value is None:
+        return ""
+    value = html.unescape(str(value))
+    value = re.sub(r"<[^>]+>", " ", value)
+    value = re.sub(r"\s+", " ", value).strip()
+    bad_values = {"none", "null", "undefined", "-", "—"}
+    if value.casefold() in bad_values:
+        return ""
+    return value
+
+
+def _xml_find_text(root: ET.Element, names: list[str]) -> str:
+    wanted = {n.casefold() for n in names}
+    for el in root.iter():
+        tag = el.tag.split("}", 1)[-1].casefold()
+        if tag in wanted and el.text:
+            v = _clean_meta_value(el.text)
+            if v:
+                return v
+    return ""
+
+
+def _parse_xml_metadata(text: str) -> tuple[str, str, str]:
+    raw = (text or "").strip().lstrip("\ufeff")
+    if not raw or "<" not in raw:
+        return "", "", ""
+    try:
+        root = ET.fromstring(raw)
+    except Exception:
+        # Alguns serviços devolvem XML dentro de JSON ou com lixo antes/depois.
+        m = re.search(r"(<\?xml.*?</RadioInfo>|<RadioInfo.*?</RadioInfo>)", raw, re.I | re.S)
+        if not m:
+            return "", "", ""
+        try:
+            root = ET.fromstring(m.group(1))
+        except Exception:
+            return "", "", ""
+
+    song = _xml_find_text(root, [
+        "DB_SONG_NAME", "DB_DALET_TITLE_NAME", "DB_TRACK_NAME", "SONG_NAME", "MUSIC_NAME",
+        "TITLE", "NAME", "CurMusic Title", "CurMusic_Title", "track", "song",
+    ])
+    artist = _xml_find_text(root, [
+        "DB_LEAD_ARTIST_NAME", "DB_ARTIST_NAME", "LEAD_ARTIST_NAME", "ARTIST_NAME",
+        "ARTIST", "AUTHOR", "PERFORMER", "CurMusic Artist", "CurMusic_Artist",
+    ])
+    album = _xml_find_text(root, ["DB_ALBUM_NAME", "ALBUM", "ALBUM_NAME"])
+
+    # Em algumas rádios Bauer/Cidade, o campo DB_ALBUM_NAME pode vir como nome público da faixa.
+    if not song and album:
+        song = album
+
+    # Se o XML vier sem tags de artista mas com título no formato Artista - Música.
+    if song and not artist:
+        parsed_artist, parsed_song = _split_artist_title(song)
+        if parsed_song:
+            artist, song = parsed_artist, parsed_song
+
+    return song, artist, album
+
+
+def _split_artist_title(value: str) -> tuple[str, str]:
+    value = _clean_meta_value(value)
+    if not value:
+        return "", ""
+    # Formatos comuns de streams: Artist - Title / Artist – Title / Artist | Title.
+    for sep in [" - ", " – ", " — ", " | ", " :: "]:
+        if sep in value:
+            left, right = value.split(sep, 1)
+            left, right = _clean_meta_value(left), _clean_meta_value(right)
+            if left and right:
+                return left, right
+    return "", ""
+
+
+def _extract_track_from_payload(payload: Any) -> tuple[str, str, str]:
+    """Extrai (música, artista, detalhe) de JSON, XML ou texto cru."""
+    if payload is None:
+        return "", "", ""
+
+    if isinstance(payload, (bytes, bytearray)):
+        payload = payload.decode("utf-8", errors="ignore")
+
+    if isinstance(payload, str):
+        text = payload.strip()
+        # JSON em string
+        if text.startswith("{") or text.startswith("["):
+            try:
+                return _extract_track_from_payload(json.loads(text))
+            except Exception:
+                pass
+        # XML em string
+        song, artist, album = _parse_xml_metadata(text)
+        if song or artist:
+            return song, artist, album
+        # Texto simples tipo "Artista - Música".
+        artist2, song2 = _split_artist_title(text)
+        if song2:
+            return song2, artist2, ""
+        return "", "", ""
+
+    if isinstance(payload, dict):
+        # Alguns serviços devolvem XML dentro do campo title/song/now_playing.
+        for raw_key in ["xml", "data", "response", "raw", "title", "song", "now_playing", "stream_title", "current_song"]:
+            raw = payload.get(raw_key)
+            if isinstance(raw, str) and "<" in raw and ">" in raw:
+                song, artist, album = _parse_xml_metadata(raw)
+                if song or artist:
+                    return song, artist, album
+
+        song = _clean_meta_value(
+            payload.get("song")
+            or payload.get("title")
+            or payload.get("track")
+            or payload.get("name")
+            or payload.get("now_playing")
+            or payload.get("stream_title")
+            or payload.get("current_song")
+            or payload.get("DB_SONG_NAME")
+            or payload.get("DB_DALET_TITLE_NAME")
+            or payload.get("DB_TRACK_NAME")
+            or payload.get("DB_ALBUM_NAME")
+        )
+        artist = _clean_meta_value(
+            payload.get("artist")
+            or payload.get("performer")
+            or payload.get("author")
+            or payload.get("subtitle")
+            or payload.get("DB_LEAD_ARTIST_NAME")
+            or payload.get("DB_ARTIST_NAME")
+        )
+        album = _clean_meta_value(payload.get("album") or payload.get("DB_ALBUM_NAME"))
+
+        # Rayo/players modernos podem usar nested currentTrack/music/metadata.
+        for nested_key in ["track", "music", "metadata", "current", "currentTrack", "nowPlaying", "now_playing"]:
+            nested = payload.get(nested_key)
+            if isinstance(nested, dict):
+                nsong, nartist, nalbum = _extract_track_from_payload(nested)
+                song = song or nsong
+                artist = artist or nartist
+                album = album or nalbum
+
+        if song and not artist:
+            parsed_artist, parsed_song = _split_artist_title(song)
+            if parsed_song:
+                artist, song = parsed_artist, parsed_song
+
+        return song, artist, album
+
+    if isinstance(payload, list):
+        for item in payload:
+            song, artist, album = _extract_track_from_payload(item)
+            if song or artist:
+                return song, artist, album
+
+    return "", "", ""
+
+
+def cidadefm_metadata() -> tuple[str, str, str]:
+    """Cidade FM tem endpoint próprio de 'now playing'. Mantemos isto antes do Shazam."""
+    urls = []
+    for env_name in ["CIDADEFM_META_URL", "URL_CIDADEFM_META"]:
+        val = os.getenv(env_name, "").strip()
+        if val:
+            urls.append(val)
+
+    # Endpoints conhecidos/compatíveis. Se algum mudar, basta pôr CIDADEFM_META_URL no Vercel.
+    urls.extend([
+        "https://cidade.fm/nowplaying.xml",
+        "https://radiocidade.iol.pt/nowplaying.xml",
+        "https://cidade.iol.pt/nowplaying.xml",
+        "https://cidade.fm/passou",
+    ])
+
+    seen = set()
+    for url in urls:
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        try:
+            r = requests.get(url, timeout=TIMEOUT, headers={**UA, "Accept": "application/xml,text/xml,application/json,text/html,*/*"})
+            if not r.ok:
+                continue
+            ctype = (r.headers.get("content-type") or "").lower()
+            payload: Any
+            if "json" in ctype:
+                try:
+                    payload = r.json()
+                except Exception:
+                    payload = r.text
+            else:
+                payload = r.text
+            song, artist, _ = _extract_track_from_payload(payload)
+            if song:
+                return song, artist, "Cidade FM XML"
+        except Exception as e:
+            logger.warning("Cidade FM metadata erro %s: %s", url, e)
+    return "", "", ""
+
 # ───────────── Metadata/identificação ─────────────
 def radio_metadata_api(url: str) -> tuple[str, str, str]:
-    """Tenta API externa. Retorna música, artista, fonte."""
+    """Tenta APIs externas e aceita JSON, XML cru ou texto Artist - Title."""
     apis = [
         f"https://radio-metadata-api-main.vercel.app/radio_info/?radio_url={quote_plus(url)}",
         f"https://twj.es/get_stream_title/?url={quote_plus(url)}",
@@ -566,21 +770,14 @@ def radio_metadata_api(url: str) -> tuple[str, str, str]:
             r = requests.get(api, timeout=TIMEOUT, headers=UA)
             if not r.ok:
                 continue
-            d = r.json()
-            song = (
-                d.get("title")
-                or d.get("song")
-                or d.get("now_playing")
-                or d.get("stream_title")
-                or d.get("current_song")
-                or ""
-            )
-            artist = d.get("artist") or d.get("performer") or d.get("author") or ""
-            if isinstance(song, dict):
-                artist = song.get("artist") or artist
-                song = song.get("title") or song.get("song") or ""
+            payload: Any
+            try:
+                payload = r.json()
+            except Exception:
+                payload = r.text
+            song, artist, _ = _extract_track_from_payload(payload)
             if song:
-                return str(song).strip(), str(artist).strip(), "metadata-api"
+                return song, artist, "metadata-api"
         except Exception as e:
             logger.warning("metadata API erro: %s", e)
     return "", "", ""
@@ -659,10 +856,15 @@ def identify_track(key: str) -> dict[str, Any]:
     artist = ""
     source = "—"
 
-    # 1) API externa rápida
-    song, artist, source = radio_metadata_api(st["url"])
+    # 1) Cidade FM: primeiro tenta o endpoint próprio/nowplaying.xml, porque é mais fiável que Shazam.
+    if key == "CIDADEFM":
+        song, artist, source = cidadefm_metadata()
 
-    # 2) Fallback Shazam universal. Sem threads e sem ffmpeg.
+    # 2) API externa rápida para as outras rádios ou fallback da Cidade FM.
+    if not song:
+        song, artist, source = radio_metadata_api(st["url"])
+
+    # 3) Fallback Shazam universal. Sem threads e sem ffmpeg.
     if not song:
         res = asyncio.run(recognize_shazam(st["url"], key))
         if res and res.get("track"):

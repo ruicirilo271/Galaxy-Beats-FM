@@ -698,5 +698,37 @@
     "station": "Rádio Motard",
     "artist": "THE SMITHS",
     "title": "THERE IS A LIGHT THAT NEVER GOES OUT"
+  },
+  {
+    "when": "2026-06-16T20:43:41.091743+01:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "CIDADE FM",
+    "title": "So se quiseres",
+    "source": "Cidade FM XML"
+  },
+  {
+    "when": "2026-06-16T20:47:11.114902+01:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "W Sound",
+    "title": "La Plena",
+    "source": "Cidade FM XML"
+  },
+  {
+    "when": "2026-06-16T20:48:56.227415+01:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "Bruno Mars",
+    "title": "I Just Might",
+    "source": "Cidade FM XML"
+  },
+  {
+    "when": "2026-06-16T20:52:26.137293+01:00",
+    "station_id": "CIDADEFM",
+    "station": "Cidade FM",
+    "artist": "CIDADE FM",
+    "title": "So se quiseres",
+    "source": "Cidade FM XML"
   }
 ]

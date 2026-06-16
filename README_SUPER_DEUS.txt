@@ -36,6 +36,8 @@ URLs das rádios:
 URL_MOTARD=...
 URL_RENASCENCA=...
 URL_CIDADEFM=...
+URL_CIDADEFM_META=https://cidade.fm/nowplaying.xml
+# também podes usar CIDADEFM_META_URL com outro endpoint se a Cidade mudar o XML
 URL_RADIOCIDADE=...
 URL_RECORD=...
 URL_ANTENA1=...
@@ -66,3 +68,14 @@ python app.py
 
 Depois abre:
 http://127.0.0.1:8250
+
+CORREÇÃO CIDADE FM
+-------------------
+Esta versão tenta primeiro identificar a Cidade FM pelo endpoint próprio nowplaying.xml / XML Bauer,
+e só depois usa a API externa e Shazam. Isto evita o problema em que a música aparecia como XML cru
+ou deixava de identificar no Vercel.
+
+Se a Cidade FM mudar o endpoint, adiciona no Vercel uma destas variáveis:
+URL_CIDADEFM_META=https://novo-endpoint.xml
+ou
+CIDADEFM_META_URL=https://novo-endpoint.xml
