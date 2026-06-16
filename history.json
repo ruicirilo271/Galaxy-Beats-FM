@@ -698,29 +698,5 @@
     "station": "Rádio Motard",
     "artist": "THE SMITHS",
     "title": "THERE IS A LIGHT THAT NEVER GOES OUT"
-  },
-  {
-    "when": "2026-06-16T20:12:04.033004+01:00",
-    "station_id": "CIDADEFM",
-    "station": "Cidade FM",
-    "artist": "Anitta, MC Danny & HITMAKER",
-    "title": "Sei Que Tu Me Odeia",
-    "source": "ShazamIO"
-  },
-  {
-    "when": "2026-06-16T20:12:19.884040+01:00",
-    "station_id": "RADIOCIDADE",
-    "station": "Rádio Cidade",
-    "artist": "FEARGAL SHARKEY",
-    "title": "YOU LITTLE THIEF [1986]",
-    "source": "metadata-api"
-  },
-  {
-    "when": "2026-06-16T20:14:04.842744+01:00",
-    "station_id": "RADIOCIDADE",
-    "station": "Rádio Cidade",
-    "artist": "ROXETTE",
-    "title": "MILK AND TOAST AND HONEY",
-    "source": "metadata-api"
   }
 ]
